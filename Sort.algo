@@ -1,0 +1,36 @@
+PROCEDURE InsertionSort(arr: ARRAY_OF INTEGER, n:INTEGER)
+VAR
+    i,j,k :INTEGER;
+BEGIN
+    FOR  i FROM 1 TO n STEP 1  DO
+        k := arr[i];
+        j:=i-1;
+
+        WHILE ((j>=0) AND (arr[j]> k )) DO
+            arr[j+1] := arr[j];
+            j:=j-1;
+        END_WHILE
+        arr[j + 1] := key;
+    END_FOR
+END
+
+
+
+ALGORITHM algorithm_name
+VAR
+    n : INTEGER;
+    arr : ARRAY_OF INTEGER[n];
+
+BEGIN
+       REPEAT
+        Write("Number of array elements");
+        Read(n);
+    UNTIL (n>0)
+    
+    Write("write down the elements of the array please !");
+    Read (arr);
+
+    InsertionSort(arr,n);
+
+    Write("Your array is now sorted ", arr)
+END
