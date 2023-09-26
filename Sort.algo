@@ -25,10 +25,13 @@ BEGIN
        REPEAT
         Write("Number of array elements");
         Read(n);
-    UNTIL (n>0)
+     UNTIL (n>0)
     
     Write("write down the elements of the array please !");
-    Read (arr);
+    FOR i FROM 1 TO n STEP 1  DO
+        Read (arr[i]);
+    END_FOR
+    
 
     InsertionSort(arr,n);
 
